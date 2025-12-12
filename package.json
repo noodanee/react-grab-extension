@@ -1,0 +1,25 @@
+{
+  "name": "react-grab-extension",
+  "version": "1.0.0",
+  "description": "MV3 extension via Vite to inject react-grab on all pages",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run build:content && npm run build:inject",
+    "build:content": "TARGET=content vite build",
+    "build:inject": "TARGET=inject vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/chrome": "^0.1.32",
+    "@types/node": "^25.0.1",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.7"
+  },
+  "dependencies": {
+    "react-grab": "^0.0.85"
+  }
+}
