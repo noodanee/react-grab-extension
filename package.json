@@ -15,11 +15,11 @@
   "private": true,
   "devDependencies": {
     "@types/chrome": "^0.1.32",
-    "@types/node": "^25.0.1",
+    "@types/node": "^25.0.3",
     "typescript": "^5.9.3",
-    "vite": "^7.2.7"
+    "vite": "^7.3.0"
   },
   "dependencies": {
-    "react-grab": "^0.0.85"
+    "react-grab": "^0.0.89"
   }
 }
