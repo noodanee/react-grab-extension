@@ -4,9 +4,11 @@
   "description": "MV3 extension via Vite to inject react-grab on all pages",
   "scripts": {
     "dev": "vite",
-    "build": "npm run build:content && npm run build:inject",
+    "build": "npm run build:content && npm run build:inject && npm run build:background && npm run build:popup",
     "build:content": "TARGET=content vite build",
-    "build:inject": "TARGET=inject vite build"
+    "build:inject": "TARGET=inject vite build",
+    "build:background": "TARGET=background vite build",
+    "build:popup": "TARGET=popup vite build"
   },
   "keywords": [],
   "author": "",

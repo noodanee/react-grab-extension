@@ -3,7 +3,14 @@
   "name": "React Grab",
   "version": "0.0.1",
   "description": "react-grab",
+  "permissions": ["scripting", "storage"],
   "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
@@ -11,12 +18,6 @@
       "run_at": "document_start",
       "all_frames": true,
       "match_about_blank": true
-    }
-  ],
-  "web_accessible_resources": [
-    {
-      "resources": ["inject.js"],
-      "matches": ["<all_urls>"]
     }
   ]
 }
