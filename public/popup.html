@@ -13,8 +13,8 @@
             }
             body {
                 margin: 0;
-                padding: 12px;
-                width: 360px;
+                padding: 16px;
+                width: 240px;
                 font:
                     13px/1.4 ui-sans-serif,
                     system-ui,
@@ -35,57 +35,15 @@
                 overflow: hidden;
                 box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08) inset;
             }
-            .field {
-                display: grid;
-                gap: 6px;
-                margin-bottom: 8px;
+            .title {
+                font-size: 13px;
+                font-weight: 600;
+                letter-spacing: 0.2px;
             }
-            .labelRow {
-                display: flex;
-                align-items: baseline;
-                justify-content: space-between;
-                gap: 10px;
-            }
-            label {
-                font-size: 12px;
-                color: rgba(255, 255, 255, 0.75);
-            }
-            .hint {
-                font-size: 11px;
-                color: rgba(255, 255, 255, 0.55);
-            }
-            input[type="text"],
-            input[type="password"],
-            input[type="number"] {
-                width: 100%;
-                padding: 9px 10px;
-                border-radius: 12px;
-                border: 1px solid rgba(255, 255, 255, 0.14);
-                background: rgba(255, 255, 255, 0.04);
-                color: #fff;
-                outline: none;
-                box-sizing: border-box;
-            }
-            input[type="text"]:focus,
-            input[type="password"]:focus,
-            input[type="number"]:focus {
-                border-color: rgba(255, 255, 255, 0.28);
-            }
-            .row {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                gap: 10px;
-                margin-top: 0;
-            }
-            .pill {
+            .status {
                 display: inline-flex;
                 align-items: center;
                 gap: 6px;
-                padding: 6px 10px;
-                border-radius: 999px;
-                border: 1px solid rgba(255, 255, 255, 0.12);
-                background: rgba(255, 255, 255, 0.03);
                 color: rgba(255, 255, 255, 0.75);
                 font-size: 12px;
             }
@@ -93,51 +51,15 @@
                 width: 7px;
                 height: 7px;
                 border-radius: 50%;
-                background: rgba(255, 255, 255, 0.35);
-            }
-            .dot.ok {
                 background: #22c55e;
-            }
-            .dot.bad {
-                background: #ef4444;
-            }
-            button.ghost {
-                appearance: none;
-                border: 1px solid rgba(255, 255, 255, 0.12);
-                background: rgba(255, 255, 255, 0.03);
-                border-radius: 12px;
-                padding: 8px 10px;
-                font: inherit;
-                color: rgba(255, 255, 255, 0.85);
-                cursor: pointer;
-                transition:
-                    background 120ms ease,
-                    border-color 120ms ease;
-            }
-            button.ghost:hover {
-                background: rgba(255, 255, 255, 0.06);
-                border-color: rgba(255, 255, 255, 0.18);
             }
         </style>
     </head>
     <body>
-        <div class="field">
-            <div class="labelRow">
-                <label for="agentServerUrl">Server URL</label>
-            </div>
-            <input
-                id="agentServerUrl"
-                type="text"
-                placeholder="http://localhost:7567"
-                spellcheck="false"
-            />
-        </div>
-        <div class="row">
-            <div class="pill" id="agentHealthPill">
-                <span class="dot" id="agentHealthDot"></span>
-                <span id="agentHealthText">未检测</span>
-            </div>
-            <button id="testAgent" class="ghost" type="button">检测</button>
+        <div class="title">React Grab</div>
+        <div class="status">
+            <span class="dot"></span>
+            <span>已启用</span>
         </div>
 
         <script src="popup.js"></script>
